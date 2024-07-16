@@ -1,3 +1,4 @@
+import { createStore } from "redux";
 const initialState = {
   name: "InOnO",
   address: {
@@ -28,3 +29,11 @@ const reducer = (state = initialState, action) => {
       return state;
   }
 };
+
+const store = createStore(reducer);
+console.log("initial State", initialState);
+const unsubscribe = store.subscribe(() =>
+  console.log("updated state ", store.getState())
+);
+store.dispatch(updateStreet("kk-12"));
+unsubscribe();
