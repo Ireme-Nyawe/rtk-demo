@@ -13,3 +13,18 @@ const updateStreet = (street) => {
     payload: street,
   };
 };
+
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case STREET_UPDATED:
+      return {
+        ...state,
+        address: {
+          ...state.address,
+          street: action.payload,
+        },
+      };
+    default:
+      return state;
+  }
+};
