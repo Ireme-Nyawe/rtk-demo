@@ -1,7 +1,7 @@
 const createSlice = require("@reduxjs/toolkit").createSlice;
 const createAsyncThunk = require("@reduxjs/toolkit").createAsyncThunk;
 const axios = require("axios");
-initialState = {
+const initialState = {
   loading: true,
   users: [],
   error: "",
