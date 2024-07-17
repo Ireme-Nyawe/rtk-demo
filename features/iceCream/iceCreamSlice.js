@@ -3,7 +3,7 @@ const initialState = {
   numOfIceCream: 15,
 };
 const iceSlice = createSlice({
-  name: ice,
+  name: "ice",
   initialState,
   reducers: {
     ordered: (state) => {
