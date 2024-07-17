@@ -2,9 +2,7 @@ const store = require("./app/store");
 const cakeActions = require("./features/cake/cakeSlice").cakeActions;
 const iceActions = require("./features/iceCream/iceCreamSlice").iceActions;
 console.log("initial state:", store.getState());
-const subs = store.subscribe(() => {
-  console.log("updated state:", store.getState());
-});
+const subs = store.subscribe(() => {});
 store.dispatch(cakeActions.ordered());
 store.dispatch(cakeActions.ordered());
 store.dispatch(cakeActions.ordered());
